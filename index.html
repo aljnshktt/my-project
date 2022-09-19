@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <title>Weather App</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>"
+    />
+    <link rel="stylesheet" href="style/style2nd.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app shadow"">
+        <div class="header">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  class="form-control
+                  shadow"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-outline-primary shadow"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Current"
+                  class="form-control btn btn-outline-success shadow"
+                  id="current-button"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="body">
+          <div class="body-main-row row">
+            <div class="body-first col-8">
+              <div class="row">
+                <div class="col-6">
+                  <ul>
+                    <li id="city">Kyiv</li>
+                    <li id="weather-element">Clouds</li>
+                    <li><div class="row">
+                    <div class="li-left col" id="min-temperature-element">Min 23</div>
+                    <div class="li-right col" id="max-temperature-element">Max 28</div>
+                  </div></li>
+                  <li><span class="current-temp" id="temperature-element">30</span> 
+                    <span class="units"> 
+                    <a href="#" class="temp-type" id="celsius-unit">˚C</a>
+                    <!-- |  -->
+                    <!-- <a href="#" class="temp-type" id="fahrenheit-unit">˚F</a> -->
+                </span></div></li>
+              </ul>
+                <div class="col-6">
+                  <img class="big-img" src="src/cloudy 2.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="body-second col-4">
+              <ul>
+                <li id="date"></li>
+                <li id="humidity-element">Humidity: 80%</li>
+                <li id="wind-element">Wind: 12 km/h</li>
+                <li id="feels-like-element">Feels like: 26 C</li>
+                <li><div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                 
+                  <button type="button" class="btn btn-outline-secondary">humidity</button>
+                  <button type="button" class="btn btn-outline-secondary">wind</button>
+                  <button type="button" class="btn btn-outline-secondary">feels</button>
+                </div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="footer">
+          <div class="row">
+            <div class="col">
+              <div>Sun</div>
+              <div class="row">
+              <div class="col-8" ><img class="little-img" src="src/rainy-day (1).png" alt="" /></div>
+              <div class="col-4"> 
+                <ul>
+                  <li>🌧</li>
+                  <li>⛈</li>
+                </ul>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-6 lil-temp-left">24˚</div>
+                <div class="col-6 lil-temp-right">21˚</div>
+              </div>
+            </div>
+            <div class="col">
+              <div>Mon</div>
+              <div class="row">
+              <div class="col-8"><img class="little-img" src="src/sun.png" width="50" alt="" /></div>
+              <div class="col-4"> 
+                <ul>
+                  <li>☀️</li>
+                  <li>☀️</li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-8 lil-temp-left">24˚</div>
+                <div class="col-4 lil-temp-right">21˚</div>
+              </div>
+            </div>
+            </div>
+            <div class="col">
+              <div>Tue</div>
+              <div class="row">
+              <div class="col-8"><img class="little-img" src="src/cloudy.png" width="50" alt="" /></div>
+              <div class="col-4"> 
+                <ul>
+                  <li>🌧</li>
+                  <li>⛈</li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-8 lil-temp-left">24˚</div>
+                <div class="col-4 lil-temp-right">21˚</div>
+              </div>
+            </div>
+            </div>
+            <div class="col">
+              <div>Wed</div>
+              <div class="row">
+              <div class="col-8"><img class="little-img" src="src/rainy-day.png" width="50" alt="" /></div>
+              <div class="col-4"> 
+                <ul>
+                  <li>🌧</li>
+                  <li>⛈</li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-8 lil-temp-left">24˚</div>
+                <div class="col-4 lil-temp-right">21˚</div>
+              </div>
+            </div>
+            </div>
+            <div class="col">
+              <div>Thu</div>
+              <div class="row">
+              <div class="col-8"><img class="little-img" src="src/sun.png" width="50" alt="" /></div>
+              <div class="col-4"> 
+                <ul>
+                  <li>☀️</li>
+                  <li>🌥</li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-8 lil-temp-left">24˚</div>
+                <div class="col-4 lil-temp-right">21˚</div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

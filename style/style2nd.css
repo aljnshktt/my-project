@@ -1,0 +1,104 @@
+body {
+  font-family: monospace, "Courier New", Courier;
+/* margin: 0 20%; */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.weather-app {
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 800px;
+  min-width: 700px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.header,
+.body,
+.footer {
+  padding: 30px 0;
+  line-height: 2;
+}
+
+.big-img {
+  width: 150px;
+}
+
+.big-img:hover {
+   width: 155px;
+ }
+
+ .little-img {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  padding: 0;
+}
+
+.units  {
+  position: relative;
+  top: -25px;
+  font-size: 20px;
+}
+
+.btn-outline-secondary {
+  text-align: left;
+  border: 1px solid #D9D9D9;
+  font:#D9D9D9;
+}
+
+.li-left {
+  text-align: right;
+}
+
+.li-right {
+  text-align: left;
+}
+
+.current-temp {
+font-size: 50px;  
+}
+
+.btn-outline-dark {
+  border: 1px solid #D9D9D9;
+}
+
+.temp-type {
+  text-decoration: none;
+  color: dimgray;
+}
+
+.fahrenheit:hover {
+font-size: 20px;
+text-decoration: none;
+  color: dimgray;
+}
+
+.btn-group {
+margin-top: 15px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: white;
+} 
+
+.lil-temp-right {
+text-align: left;
+
+}
+
+.lil-temp-left {
+text-align: right;
+}
